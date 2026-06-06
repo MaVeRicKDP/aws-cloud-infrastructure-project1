@@ -21,3 +21,19 @@ This came directly out of a previous failed attempt (TechNova project) where Aut
 ![Architecture Diagram](AWS%20Structure%20Project1.png)
 
 **The traffic flow:**
+```
+Users → Route 53 → CloudFront (CDN + HTTPS)
+                        ↓
+                   ALB (public subnets)
+                        ↓
+              Auto Scaling Group — EC2 Nginx
+                   (private subnets)
+                        ↓
+                   RDS MySQL
+                   (private subnets)
+
+S3 ──────────────→ CloudFront (static assets)
+CloudWatch ──────→ Monitoring + Alarms
+Secrets Manager →  DB credentials (no hardcoding)
+IAM Role ────────→ EC2 permissions
+```
