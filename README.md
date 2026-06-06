@@ -18,6 +18,6 @@ This came directly out of a previous failed attempt (TechNova project) where Aut
 
 ## Architecture
 
-![Architecture Diagram](AWS%20Structure%20Project1.png))
+![Architecture Diagram](AWS%20Structure%20Project1.png)
 
 **The traffic flow:**
